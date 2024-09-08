@@ -1,9 +1,14 @@
+# Importamos la libreria Tkinter y la renombramos tk
 import tkinter as tk
+# Dentro de la libreria Tkinter importamos el modulo de "simpledialog" que son dialogos de entrada estandar
+# y messagebox es un modulo que permite crear cuadros de mensaje y dialogos para confitmar o rechazar acciones
 from tkinter import simpledialog, messagebox  
 
 #crear la ventana principal
+# root se utiliza para nombrar a la ventana principal de la aplicacion, tambien conocida como ventana raiz
 root=tk.Tk()
 root.title("lista de nombres")
+# establece la posición y las dimensiones de la ventana principal
 root.geometry("400x300") #tamaño de la ventana
 #lista para almacenar los nombres
 nombres = []
@@ -28,7 +33,7 @@ def eliminar_nombre():
     if seleccion and int(seleccion)<=len(nombres):
         del nombres [int(seleccion)-1]#eliminar el nombre de la lista
         actualizar_text()
-    else:
+    else: # El módulo messagebox de tkinter es un módulo que permite crear cuadros de mensaje de información predeterminados.
         messagebox.showwarning("advertencia","seleccione un nombre para eliminar")
         
 #funcion para modificar nombre
