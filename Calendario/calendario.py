@@ -6,9 +6,9 @@ class CalendarioApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Calendario")
-        self.eventos = {}  # Diccionario para almacenar eventos con fechas como clave
+        self.eventos = {}  
         
-        # Configuración de elementos de la interfaz
+        
         self.cal = ttkbootstrap.DateEntry(self.root, dateformat='%d/%m/%Y', bootstyle="info")
         self.cal.pack(padx=40, pady=10)
         
@@ -65,7 +65,7 @@ class CalendarioApp:
             for evento in self.eventos[date]:
                 self.eventos_listbox.insert(tk.END, evento)
 
-# Inicializar la aplicación
+
 root = ttkbootstrap.Window(themename="cyborg")
 app = CalendarioApp(root)
 root.mainloop()
