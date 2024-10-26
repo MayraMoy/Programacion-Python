@@ -55,12 +55,12 @@ class CalendarioApp:
         if date in self.eventos and selected_evento:
             evento = self.eventos_listbox.get(selected_evento)
             self.eventos[date].remove(evento)
-            if not self.eventos[date]:  # Si no quedan eventos en la fecha, eliminar la fecha del diccionario
+            if not self.eventos[date]:  
                 del self.eventos[date]
             self.mostrar_eventos(date)
 
     def mostrar_eventos(self, date):
-        self.eventos_listbox.delete(0, tk.END)  # Limpiar la lista antes de mostrar eventos
+        self.eventos_listbox.delete(0, tk.END)  
         if date in self.eventos:
             for evento in self.eventos[date]:
                 self.eventos_listbox.insert(tk.END, evento)
