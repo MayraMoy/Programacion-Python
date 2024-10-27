@@ -7,7 +7,7 @@ cursor = conn.cursor()
 
 # Creamos una tabla
 cursor.execute('''
-    CREATE TABLE IF NOT EXISTS usuarios(
+    CREATE TABLE IF NOT EXISTS Usuarios(
         id INTEGER PRIMARY KEY,
         nombre TEXT NOT NULL,
         edad INTEGER,
